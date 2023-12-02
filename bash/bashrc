@@ -1,0 +1,8 @@
+# Slurm
+alias sqme='squeue --format="%.18i %.9P %.30j %.8u %.8T %.10M %.9l %.6D %R" --user mdegroot2'
+alias sacctme='sacct --format=User,JobID,Jobname,partition,Submit,reserved,state,time,reqmem,start,end,elapsed,nnodes,ncpus,nodelist,MaxVMSize -X'
+export SLURM_TIME_FORMAT="relative"
+
+#PS1 variable
+export PS1='[$(whoami)@\h $(pwd)]$ '
+export PS1="$PS1\[\e]1337;CurrentDir="'$(pwd)\a\]'
